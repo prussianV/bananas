@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+        <link href="./css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="fundo">
+            <div class="container">
+                <div class="text">
+                    <h1>TESTE PLUGINS</h1>
+                </div>
+                <div class="butoes">
+                    <button id="btnNot" class="btn">Notificação</button>
+                    <button id="btnBeep" class="btn">Beep</button>
+                    <button id="btnVi" class="btn">Vibrar</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        document.getElementById("btnNot").addEventListener("click", function() {
+            navigator.notification.alert("Isto é uma mensagem", null, "Mensagem", "OK");
+        });
+
+        document.getElementById("btnBeep").addEventListener("click", function() {
+            navigator.notification.beep(5);
+        });
+
+        document.getElementById("btnVi").addEventListener("click", function() {
+            navigator.vibrate(3000);
+        });
+    </script>
+</html>
